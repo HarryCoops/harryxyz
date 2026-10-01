@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0b141a">
+<title>You've been invited… | Harry's Halloween</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+:root{color-scheme:dark;--red:#b82329;--paper:#d5c4a2;--ink:#261b16}
+*{box-sizing:border-box}body{margin:0;min-height:100svh;background:#100b0b;color:#c8bba8;font-family:'Courier New',monospace;overflow-x:hidden;background-image:radial-gradient(ellipse at 50% 45%,#44201c55,transparent 65%),repeating-linear-gradient(0deg,#0002 0px,#0002 1px,transparent 1px,transparent 4px)}
+body:before{content:'';position:fixed;inset:0;pointer-events:none;z-index:8;box-shadow:inset 0 0 160px #0009;background:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Cpath fill='%23fff' opacity='.11' filter='url(%23n)' d='M0 0h180v180H0z'/%3E%3C/svg%3E");opacity:.4}
+.page{position:relative;width:min(800px,100%);margin:auto;padding:38px 24px 80px}.terminal-case{position:relative;padding:18px 22px 0;border:3px solid #10171b;background:linear-gradient(115deg,#807d69,#b0a68a 15%,#8b8877 50%,#595e57);box-shadow:inset 3px 3px #c3b99a,inset -4px -4px #383f3b,10px 12px 0 #0008,0 0 100px #3b90ac18}.hardware-top{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:0 2px 14px;color:#222c2b;font-size:10px;letter-spacing:2px}.hardware-top strong{font-weight:bold}.hardware-top span{border:1px solid #414c46;padding:3px 5px;font-size:8px;letter-spacing:1px}.mail{position:relative;margin:auto;border:4px solid #263337;outline:2px solid #4a5048;background:#102c3c;box-shadow:0 0 0 5px #4b5048,inset 0 0 35px #0008;isolation:isolate}.mail:after{content:'';position:absolute;inset:0;z-index:3;pointer-events:none;background:repeating-linear-gradient(0deg,#04101918 0px,#04101918 1px,transparent 1px,transparent 4px);box-shadow:inset 0 0 32px #030d1744}.mail:focus{outline:2px solid #78b2c0}.titlebar{display:flex;align-items:center;gap:8px;padding:9px 12px;background:#285b75;border-bottom:2px solid #74a2af;font:19px 'VT323',monospace;letter-spacing:1px;color:#d2eff0;text-shadow:1px 1px #12374a}.mail-icon{font-size:19px}.window-controls{margin-left:auto;display:flex;gap:4px}.window-controls span{width:17px;height:17px;text-align:center;border:1px solid #8cb2bb;background:#1a4057;color:#c5e5e7;line-height:13px}.headers{padding:14px 20px;border-bottom:1px solid #6293a055;font-size:11px;line-height:1.9;color:#b8d4d9;background:#15394b}.headers p{margin:0}.headers b{font-weight:normal;display:inline-block;width:68px;color:#7fa5b3}.headers .subject{color:#e3eacb}.attachment{float:right;font:15px 'VT323',monospace;color:#c5d9ce;border:1px solid #648d94;padding:2px 7px;margin-top:3px}.stage{position:relative;isolation:isolate;min-height:490px;display:grid;place-items:center;padding:30px 35px;overflow:hidden;background:radial-gradient(ellipse at 50% 40%,#39718b,#163a50 80%)}.stage:before{content:'';position:absolute;inset:0;opacity:.3;background:linear-gradient(90deg,transparent 49.5%,#93d0d811 50%,transparent 50.5%),linear-gradient(transparent 49.5%,#93d0d811 50%,transparent 50.5%);background-size:24px 24px}
+.note{position:relative;width:min(100%,448px);min-height:408px;padding:36px 24px 28px;text-align:center;color:#292027;background:transparent;isolation:isolate;filter:drop-shadow(8px 8px 0 #0008);font-family:'VT323','Courier New',monospace}.note:before{content:'';position:absolute;inset:0;z-index:-1;background-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22112%22%20height%3D%22112%22%20viewBox%3D%220%200%20112%20112%22%20shape-rendering%3D%22crispEdges%22%3E%3Cpath%20fill%3D%22%23b29a70%22%20d%3D%22M2%200h108v2h2v106h-2v4H2v-2H0V4h2z%22%2F%3E%3Cpath%20fill%3D%22%23dbcca5%22%20d%3D%22M4%202h102v2h4v102h-4v4H4v-4H2V6h2z%22%2F%3E%3Cpath%20fill%3D%22%23c6b58d%22%20d%3D%22M4%208h2v90H4zM8%20104h92v2H8zM104%2012h2v84h-2zM12%206h70v2H12zM8%2026h2v2H8zM99%2034h2v2h-2zM16%2092h4v2h-4zM88%2012h4v2h-4zM64%20100h4v2h-4z%22%2F%3E%3Cpath%20fill%3D%22%2354151c%22%20d%3D%22M2%200h30v4h-6v4h-8v4h-4v10h-4v-6H6v-6H0V4h2zM112%2082v26h-2v4H88v-4h-8v-4h12v-4h6v-8h6V82z%22%2F%3E%3Cpath%20fill%3D%22%238f2028%22%20d%3D%22M4%202h20v2h-6v4h-6v8H8V8H4zM110%2090v16h-4v4H94v-4h6v-8h6v-8z%22%2F%3E%3Cpath%20fill%3D%22%23ad3031%22%20d%3D%22M6%202h10v2H6zM106%2098h2v8h-2z%22%2F%3E%3Cpath%20fill%3D%22%2378202a%22%20d%3D%22M18%2012h2v8h-2zM18%2022h2v2h-2zM6%2026h2v4H6zM28%208h2v2h-2zM94%2088h2v4h-2zM86%2098h4v2h-4zM102%2076h2v2h-2zM78%20108h4v2h-4z%22%2F%3E%3C%2Fsvg%3E");background-size:100% 100%;image-rendering:pixelated}.animating .note{animation:reveal 2.8s steps(8,end) both}.note-kicker{text-transform:uppercase;font-size:22px;letter-spacing:2px;margin:6px 0 12px}.note h2{font-family:inherit;text-transform:uppercase;font-size:64px;font-weight:400;line-height:.85;letter-spacing:2px;margin:0;color:#8f2028;text-shadow:3px 3px #b29a70}.note h2 span{display:block;font-size:36px;letter-spacing:6px;color:#292027;margin-bottom:8px;text-shadow:none}.divider{display:flex;align-items:center;justify-content:center;gap:12px;margin:18px auto 14px;font-size:18px;color:#78202a}.divider:before,.divider:after{content:'';height:3px;width:60px;background:#b29a70}.details{display:flex;justify-content:center}.details div{padding:0 18px}.details div+div{border-left:2px solid #b29a70}.details small{display:block;text-transform:uppercase;font-size:16px;letter-spacing:2px;margin-bottom:4px;color:#695442}.details strong{font-size:25px;font-weight:normal;white-space:nowrap}.mandatory{position:relative;display:inline-block;text-transform:uppercase;border:3px solid #8f2028;color:#8f2028;font-size:22px;padding:5px 9px 3px;margin:20px 0 12px;box-shadow:3px 3px 0 #b29a70;letter-spacing:1px}.postscript{font-size:16px;line-height:1.1;margin:0;color:#695442}
+
+.statusbar{display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px 12px;padding:9px 12px;border-top:1px solid #628c99;font:14px 'VT323',monospace;letter-spacing:1px;color:#b2ccd2;background:#15394b}.statusbar span:first-child:before{content:'■';margin-right:7px;color:#a4b786}.statusbar span:last-child{color:#e2bd7c}.hardware-bottom{display:flex;align-items:center;gap:10px;min-height:49px;color:#27332f;font-size:8px;letter-spacing:1px}.vents{flex:1;max-width:100px;height:10px;background:repeating-linear-gradient(90deg,#293732 0 3px,transparent 3px 7px);border-bottom:1px solid #b9b094}.hardware-bottom .power-led{width:6px;height:6px;margin-left:auto;background:#b6c57e;box-shadow:0 0 6px #c7d47b}.hardware-bottom .serial{color:#3d4940}.footer{text-align:center;margin:24px 0 0}.replay{min-height:44px;font:18px 'VT323',monospace;letter-spacing:1px;text-transform:uppercase;color:#bbd4d7;background:#14252d;border:1px solid #5d7880;padding:10px 18px;box-shadow:3px 3px #0006;cursor:pointer;transition:background .2s,color .2s}.replay:hover{background:#224351;color:#e6f5ee}.replay:focus-visible{outline:2px solid #b9dfe4;outline-offset:5px}.footer p{font-size:9px;line-height:1.8;letter-spacing:2px;color:#9caea9;margin:19px 0}
+.bat-layer{position:fixed;inset:0;pointer-events:none;z-index:10;overflow:hidden}.bat{position:absolute;left:var(--x);top:var(--y);width:var(--size);image-rendering:pixelated;filter:drop-shadow(4px 4px 0 #0006);animation:fly var(--duration) var(--delay) steps(24,end) both}.bat svg{display:block;width:100%;overflow:visible;shape-rendering:crispEdges}.bat .frame-up{animation:flap-up .32s steps(1,end) infinite}.bat .frame-down{animation:flap-down .32s steps(1,end) infinite}
+@keyframes flap-up{0%,100%{visibility:visible}50%{visibility:hidden}}@keyframes flap-down{0%,100%{visibility:hidden}50%{visibility:visible}}@keyframes fly{0%{opacity:0;transform:translate(0,128px)}8%{opacity:1}100%{opacity:1;transform:translate(var(--drift),-115vh)}}@keyframes reveal{0%,15%{opacity:0;transform:translateY(24px)}100%{opacity:1;transform:translateY(0)}}
+
+@media(max-width:520px){.page{padding:20px 10px 80px}.terminal-case{padding:12px 10px 0}.hardware-top{font-size:9px;letter-spacing:1px;padding-bottom:12px}.hardware-top span{font-size:7px}.mail{border-width:3px}.titlebar{padding:8px;font-size:16px;letter-spacing:0}.headers{padding:10px 12px;font-size:10px}.headers b{width:58px}.attachment{display:none}.stage{padding:22px 10px;min-height:420px}.note{padding:28px 12px 22px;min-height:370px}.note h2{font-size:clamp(36px,10vw,52px);letter-spacing:1px}.note h2 span{font-size:29px}.details div{padding:0 8px}.details strong{font-size:20px;white-space:normal}.note-kicker{font-size:18px;letter-spacing:1px}.mandatory{font-size:17px;letter-spacing:0;margin-top:20px}.postscript{font-size:14px}.statusbar{font-size:12px;padding:8px;letter-spacing:0}.hardware-bottom{gap:8px;font-size:7px;min-height:42px}.hardware-bottom .serial{display:none}.footer{margin-top:20px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}.bat-layer{display:none}.replay{display:none}}
+.sound-toggle{position:fixed;right:max(16px,env(safe-area-inset-right));bottom:max(16px,env(safe-area-inset-bottom));z-index:12;display:grid;place-items:center;width:44px;height:44px;padding:10px;border:2px solid #70503b;background:#211714;color:#d5c4a2;cursor:pointer;box-shadow:3px 3px 0 #000}.sound-toggle svg{width:20px;height:20px;shape-rendering:crispEdges}.sound-toggle .muted-mark{display:none}.sound-toggle[aria-pressed="true"] .muted-mark{display:block}.sound-toggle[aria-pressed="true"] .sound-waves{display:none}.sound-toggle:hover{background:#41231b}.sound-toggle:focus-visible{outline:2px solid #d7b28b;outline-offset:5px}.sound-toggle:disabled{opacity:.5;cursor:default}.sound-status{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}.page{padding-bottom:76px}
+
+.entry-screen{position:relative;height:100svh;min-height:360px;overflow:hidden;background:#020507;isolation:isolate}.entry-screen:before{content:"";position:absolute;inset:-20px;background:linear-gradient(#020507a8,#020507ed),url("assets/halloween-lab-v2.png") center/cover;filter:blur(16px);z-index:-1}.entry-screen[hidden]{display:none}.lab-scene{position:absolute;left:50%;top:50%;width:max(100svh,360px);height:max(100svh,360px);transform:translate(-50%,-50%);margin:0}.lab-image{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;image-rendering:pixelated;pointer-events:none}.lab-dark{filter:brightness(.12) saturate(.55)}.lab-lit{animation:lab-flicker 11s steps(1,end) infinite;will-change:opacity}.lab-monitor{clip-path:polygon(35.4% 41.1%,45.3% 39.5%,45.4% 47.1%,43.8% 49.5%,35.6% 50.6%);filter:brightness(.85)}.lab-scene:after{content:'';position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at 43% 44%,transparent 20%,#0008 85%);z-index:2}.computer-hotspot{position:absolute;left:34.8%;top:39%;width:11.7%;height:12.5%;min-width:44px;min-height:44px;z-index:3;border:0;background:transparent;cursor:pointer;padding:0;transform:skewY(-7deg)}.computer-hotspot:before{content:'';position:absolute;inset:2%;border:2px solid #b6eaff;box-shadow:0 0 22px #74cfff66;opacity:0;transition:opacity .2s}.computer-hotspot:hover:before,.computer-hotspot:focus-visible:before{opacity:1}.computer-hotspot:focus-visible{outline:3px solid #e0f5ff;outline-offset:5px}.entry-heading{position:absolute;top:max(24px,env(safe-area-inset-top));left:24px;z-index:4;margin:0;color:#adc0c5;font:20px 'VT323',monospace;letter-spacing:2px;text-shadow:2px 2px #000}.entry-heading:before{content:'';display:inline-block;width:6px;height:6px;margin-right:10px;background:#a3312e;box-shadow:0 0 8px #a3312e}.entry-caption{position:absolute;bottom:max(30px,env(safe-area-inset-bottom));left:50%;transform:translateX(-50%);width:max-content;max-width:90%;z-index:4;text-align:center;pointer-events:none;padding:14px 22px;background:#030609d9;border:1px solid #66758055;box-shadow:4px 4px #0006}.entry-caption p{margin:0;color:#d2e0df;font:clamp(21px,5vw,28px) 'VT323',monospace;letter-spacing:1px}.entry-caption small{display:block;margin-top:6px;font:10px 'Courier New',monospace;color:#97a5aa;letter-spacing:1px}.awaiting-entry .page,.awaiting-entry .sound-toggle,.awaiting-entry .sound-status{display:none}
+/* Uneven, spaced-out light failures; no rapid strobe. */
+@keyframes lab-flicker{0%,100%{opacity:0}12%{opacity:.82}19%{opacity:.2}28%{opacity:1}46%{opacity:0}66%{opacity:.6}73%{opacity:.1}84%{opacity:.95}93%{opacity:0}}
+@media(prefers-reduced-motion:reduce){.lab-lit{animation:none!important;opacity:.8}}
+
+/* Portrait artwork preserves the room's full width; the added ceiling and floor
+   provide space around the scene instead of cropping the shelves and vessel. */
+@media(max-aspect-ratio:3/4){
+  .entry-screen:before{background-image:linear-gradient(#020507a8,#020507ed),url("assets/halloween-lab-mobile.png")}
+  .lab-scene{width:min(100vw,56.28svh);height:auto;aspect-ratio:941/1672}
+  .lab-monitor{clip-path:polygon(35.1% 44.38%,45.05% 43.36%,45.48% 46.83%,42.5% 48.8%,35.28% 49.64%)}
+  .computer-hotspot{left:34.5%;top:43%;width:12%;height:7.3%}
+  .entry-heading{font-size:17px;left:18px}
+  .entry-caption{padding:12px 16px}
+}
+/* The opened message inherits the laboratory's cold monitor glow and worn hardware. */
+body{background:#0b141a;color:#bfceca;background-image:linear-gradient(#061017dd,#081218f2),url("assets/halloween-lab-v2.png");background-position:center;background-size:cover;background-attachment:fixed}
+.note{filter:drop-shadow(5px 7px 0 #061d3277)}
+.document-id{display:flex;justify-content:space-between;gap:10px;border-bottom:2px solid #81795766;padding-bottom:7px;margin:0 0 16px;font:11px 'VT323',monospace;letter-spacing:1px;color:#655d49}
+.note h2{color:#762d2a;text-shadow:2px 2px #ac9673}
+.note h2 span{color:#303c37}
+.note-kicker{color:#485044}
+.divider{font:14px 'VT323',monospace;letter-spacing:2px;color:#65715d}
+.divider:before,.divider:after{background:#899077;height:2px}
+.details small{color:#5b6250}
+.mandatory{border-width:2px;color:#782f2a;border-color:#782f2a;background:#b3a77a22;box-shadow:2px 2px #aa9877}
+.sound-toggle{border-color:#607782;background:#16262e;color:#c3d6d5}
+.sound-toggle:hover{background:#294553}
+@media(max-width:520px){.document-id{font-size:10px;letter-spacing:0;margin-bottom:14px}.note{padding-top:23px}.note h2{line-height:.9}}
+.lab-lit.is-scripted{animation:none}
+.glep-cameo{position:absolute;z-index:1;width:7%;aspect-ratio:2/3;pointer-events:none;clip-path:polygon(0 0,100% 0,100% 62%,75% 62%,75% 68%,0 68%);filter:brightness(.7) saturate(.75);image-rendering:pixelated}
+.glep-cameo[hidden]{display:none}
+.glep-cameo img{display:block;width:100%;height:100%;image-rendering:pixelated}
+.glep-cameo[data-spot="stool"]{left:83%;top:65%;transform:scaleX(-1)}
+.glep-cameo[data-spot="crates"]{left:17%;top:72%}
+.glep-cameo[data-spot="desk"]{left:39%;top:67%;transform:scaleX(-1)}
+@media(max-aspect-ratio:3/4){
+  .glep-cameo{width:8%}
+  .glep-cameo[data-spot="stool"]{left:84%;top:57.5%}
+  .glep-cameo[data-spot="crates"]{left:17%;top:67%}
+  .glep-cameo[data-spot="desk"]{left:39%;top:60%}
+}
+</style>
+<noscript><style>.entry-screen,.sound-toggle,.replay{display:none!important}.awaiting-entry .page{display:block}</style></noscript>
+</head>
+<body class="awaiting-entry">
+<section class="entry-screen" aria-labelledby="entry-title">
+  <h1 class="entry-heading" id="entry-title">1 UNREAD MESSAGE</h1>
+  <figure class="lab-scene" aria-label="A blood-stained pixel-art laboratory. A scientist lies with their head on the keyboard, blood trailing from their eyes. The overhead light flickers over scientific charts and a shattered, empty experiment containment vessel.">
+    <picture><source media="(max-aspect-ratio: 3/4)" srcset="assets/halloween-lab-mobile.png" width="941" height="1672"><img class="lab-image lab-dark" src="assets/halloween-lab-v2.png" alt="" width="1254" height="1254" fetchpriority="high"></picture>
+    <picture><source media="(max-aspect-ratio: 3/4)" srcset="assets/halloween-lab-mobile.png" width="941" height="1672"><img class="lab-image lab-lit" src="assets/halloween-lab-v2.png" alt="" width="1254" height="1254" aria-hidden="true"></picture>
+    <picture><source media="(max-aspect-ratio: 3/4)" srcset="assets/halloween-lab-mobile.png" width="941" height="1672"><img class="lab-image lab-monitor" src="assets/halloween-lab-v2.png" alt="" width="1254" height="1254" aria-hidden="true"></picture>
+    <div class="glep-cameo" data-spot="stool" hidden aria-hidden="true"><img src="assets/glep-pixel.png" width="1024" height="1536" alt=""></div>
+    <button class="computer-hotspot enter-button" type="button" aria-label="Open the invitation on the computer" aria-describedby="entry-hint"></button>
+  </figure>
+</section>
+<div class="page">
+  <div class="terminal-case">
+    <div class="hardware-top" aria-hidden="true"><strong>H. LABS / TERMINAL 04</strong><span>PROPERTY OF HARRY</span></div>
+  <main class="mail" tabindex="-1" aria-label="Halloween party invitation">
+    <div class="titlebar"><span class="mail-icon" aria-hidden="true">✉</span><span>H-MAIL / PERSONAL INBOX</span><div class="window-controls" aria-hidden="true"><span>_</span><span>□</span><span>×</span></div></div>
+    <div class="headers"><span class="attachment">[ invitation.txt ]</span><p><b>From:</b> Harry &lt;your host&gt;</p><p><b>To:</b> You, if you dare</p><p class="subject"><b>Subject:</b> You're invited…</p></div>
+    <div class="stage">
+      <article class="note" aria-label="You're invited to Harry's halloween party on Oct 31 at Harry's house, costumes mandatory">
+        <div class="document-id" aria-hidden="true"><span>H.LABS // PRIVATE</span><span>31 / 10</span></div>
+        <p class="note-kicker">You're invited to</p>
+        <h2><span>Harry's</span>Halloween<br>Party</h2>
+        <div class="divider" aria-hidden="true">+ + +</div>
+        <div class="details"><div><small>When</small><strong>Oct 31</strong></div><div><small>Where</small><strong>Harry's house</strong></div></div>
+        <p class="mandatory">Costumes mandatory</p>
+        <p class="postscript">Come as someone else. Leave… if you can.</p>
+      </article>
+    </div>
+    <div class="statusbar"><span>MESSAGE RECEIVED</span><span>CONTAINMENT: OFFLINE</span></div>
+  </main>
+    <div class="hardware-bottom" aria-hidden="true"><span class="vents"></span><span class="serial">SN: 1031-H / REV. 04</span><span class="power-led"></span><span>POWER</span></div>
+  </div>
+  <footer class="footer"><button class="replay" type="button">↻ &nbsp; Release the bats again</button></footer>
+</div>
+<button class="sound-toggle" type="button" aria-pressed="false" aria-label="Mute soundtrack" title="Mute soundtrack"><svg viewBox="0 0 20 20" aria-hidden="true"><path fill="currentColor" d="M2 7h4V5h2V3h2v14H8v-2H6v-2H2z"/><path class="sound-waves" fill="currentColor" d="M12 6h2v8h-2zM16 3h2v14h-2z"/><path class="muted-mark" fill="currentColor" d="M12 6h2v2h-2zM16 6h2v2h-2zM14 8h2v4h-2zM12 12h2v2h-2zM16 12h2v2h-2z"/></svg></button>
+<p class="sound-status" role="status">Soundtrack starts when you enter.</p>
+<div class="bat-layer" aria-hidden="true"></div>
+<script>
+// One shared clock keeps the cameo strictly synchronized with the room light.
+(() => {
+  const light = document.querySelector('.lab-lit');
+  const cameo = document.querySelector('.glep-cameo');
+  const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const spots = ['stool', 'crates', 'desk'];
+  // Same deliberately spaced flicker pattern as the CSS fallback.
+  const phases = [[0,1320],[.82,770],[.2,990],[1,1980],[0,2200],
+    [.6,770],[.1,1210],[.95,990],[0,770]];
+  let timer;
+  let entered = false;
+  let lastSpot = '';
+  light.classList.add('is-scripted');
+
+  function revealCameo(brightness) {
+    cameo.hidden = true;
+    if (brightness < .5 || Math.random() > .6) return;
+    const choices = spots.filter(spot => spot !== lastSpot);
+    lastSpot = choices[Math.floor(Math.random() * choices.length)];
+    cameo.dataset.spot = lastSpot;
+    cameo.style.opacity = String(brightness);
+    cameo.hidden = false;
+  }
+
+  function step(index) {
+    if (entered || document.hidden) return;
+    const [brightness, delay] = phases[index];
+    light.style.opacity = String(brightness);
+    revealCameo(brightness);
+    timer = setTimeout(() => step((index + 1) % phases.length), delay);
+  }
+
+  function restart() {
+    clearTimeout(timer);
+    cameo.hidden = true;
+    if (entered || document.hidden) return;
+    if (motion.matches) {
+      // A still Easter egg replaces random reveals when reduced motion is requested.
+      light.style.opacity = '.8';
+      cameo.dataset.spot = 'stool';
+      cameo.style.opacity = '.8';
+      cameo.hidden = false;
+      return;
+    }
+    step(0);
+  }
+  document.addEventListener('visibilitychange', restart);
+  motion.addEventListener('change', restart);
+  document.addEventListener('invitation:enter', () => {
+    entered = true;
+    clearTimeout(timer);
+    cameo.hidden = true;
+  }, { once: true });
+  window.addEventListener('pagehide', () => { clearTimeout(timer); cameo.hidden = true; });
+  window.addEventListener('pageshow', restart);
+  restart();
+})();
+
+(() => {
+  const layer = document.querySelector('.bat-layer');
+  const stage = document.querySelector('.stage');
+  const button = document.querySelector('.replay');
+  const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  let cleanup;
+  // Two hand-drawn 32 × 20 sprite frames, swapped without tweening.
+  const bat = `<svg viewBox="0 0 32 20" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges"><g fill="#17131e"><g class="frame-up"><path d="M0 0h2v2h2v2h4v2h4v3h3v6h-4v-2H8v-2H5v2H3V9H1V5H0zM32 0h-2v2h-2v2h-4v2h-4v3h-3v6h4v-2h3v-2h3v2h2V9h2V5h1z"/><path fill="#39303f" d="M2 4h2v2h4v2h4v2H8V9H4V7H2zM30 4h-2v2h-4v2h-4v2h4V9h4V7h2z"/></g><g class="frame-down"><path d="M13 9H9v2H5v3H3v5h3v-2h3v-2h3v2h3V9zM19 9h4v2h4v3h2v5h-3v-2h-3v-2h-3v2h-3V9z"/><path fill="#39303f" d="M5 14h4v-2h4v2H9v2H5zM27 14h-4v-2h-4v2h4v2h4z"/></g><path d="M13 5h2v2h2V5h2v10h-1v3h-1v2h-2v-2h-1v-3h-1z"/><path fill="#e54b4b" d="M14 9h1v1h-1zM17 9h1v1h-1z"/></g></svg>`;
+  function release() {
+    clearTimeout(cleanup);
+    layer.replaceChildren();
+    stage.classList.remove('animating');
+    if (motion.matches) return;
+    void stage.offsetWidth;
+    stage.classList.add('animating');
+    for (let i = 0; i < 64; i++) {
+      const el = document.createElement('div');
+      el.className = 'bat';
+      el.style.cssText = `--x:${-5 + Math.random()*105}%;--y:${35 + Math.random()*60}%;--size:${[64,96,128,160][Math.floor(Math.random()*4)]}px;--duration:${1.5 + Math.random()*1.3}s;--delay:${Math.random()*.55}s;--drift:${(Math.random()-.5)*85}vw`;
+      el.innerHTML = bat;
+      layer.append(el);
+    }
+    cleanup = setTimeout(() => { layer.replaceChildren(); stage.classList.remove('animating'); }, 3500);
+  }
+  button.addEventListener('click', release);
+  motion.addEventListener('change', () => { if (motion.matches) { clearTimeout(cleanup); layer.replaceChildren(); stage.classList.remove('animating'); } });
+  document.addEventListener('invitation:enter', release, { once: true });
+})();
+
+// Original eerie laboratory score, rendered locally once and looped sample-accurately.
+(() => {
+  const toggle = document.querySelector('.sound-toggle');
+  const status = document.querySelector('.sound-status');
+  const AudioContextClass = window.AudioContext || window.webkitAudioContext;
+  let context, master, soundtrack, source;
+  let muted = false;
+  let entered = false;
+
+  function compose() {
+    const rate = 22050;
+    const beat = 60 / 68;
+    const buffer = context.createBuffer(1, Math.round(32 * beat * rate), rate);
+    const samples = buffer.getChannelData(0);
+    const duration = samples.length / rate;
+    const tau = Math.PI * 2;
+    // Whole cycles keep the machinery drone continuous across the loop seam.
+    const droneFrequency = Math.round(55 * duration) / duration;
+    const detunedFrequency = (Math.round(55 * duration) + 9) / duration;
+    const tensionFrequency = Math.round(58.27 * duration) / duration;
+    for (let i = 0; i < samples.length; i++) {
+      const t = i / rate;
+      const breathing = .72 + .28 * Math.sin(tau * 3 * t / duration);
+      const drone = Math.sin(tau * droneFrequency * t) * .10
+        + Math.sin(tau * detunedFrequency * t) * .045
+        + Math.sin(tau * droneFrequency * 2 * t) * .025;
+      const unease = Math.sin(tau * tensionFrequency * t) * .018
+        * (1 - Math.cos(tau * 2 * t / duration));
+      samples[i] = drone * breathing + unease;
+    }
+
+    function tone(midi, at, beats, level, voice) {
+      const frequency = 440 * Math.pow(2, (midi - 69) / 12);
+      const start = Math.round(at * beat * rate);
+      const length = Math.round(beats * beat * rate);
+      for (let i = 0; i < length; i++) {
+        const t = i / rate;
+        const envelope = Math.min(1, t / .018, (length - 1 - i) / (rate * .18));
+        let wave;
+        if (voice === 'bell') {
+          // Inharmonic partials suggest a distant metal pipe being struck.
+          wave = Math.sin(tau * frequency * t) * .55
+            + Math.sin(tau * frequency * 2.013 * t) * .25
+            + Math.sin(tau * frequency * 3.97 * t) * .12;
+        } else if (voice === 'pulse') {
+          wave = Math.sin(tau * (48 * t + .8 * (1 - Math.exp(-t * 18))));
+        } else {
+          // Soft odd harmonics retain the retro synth character without a jaunty tune.
+          const phase = tau * frequency * t + .012 * Math.sin(tau * 4.7 * t);
+          wave = Math.sin(phase) * .65 + Math.sin(phase * 3) * .18
+            + Math.sin(tau * frequency * 1.003 * t) * .17;
+        }
+        const decay = voice === 'pulse' ? 9 : voice === 'bell' ? 1.15 : .7;
+        samples[(start + i) % samples.length] += wave * level * envelope * Math.exp(-t * decay);
+      }
+    }
+    // Sparse, unresolved phrases: semitone clashes and a distant tritone answer.
+    const phrase = [[0,69,2.5],[3.5,70,1.8],[7,64,3],[12,75,2.5],
+      [15.5,70,2],[20,69,3],[24.5,68,2],[29,63,3.5]];
+    phrase.forEach(([at, pitch, length]) => {
+      tone(pitch, at, length, .085, 'synth');
+      tone(pitch, (at + 1.25) % 32, length, .025, 'synth');
+      tone(pitch, (at + 2.5) % 32, length, .009, 'synth');
+    });
+    [[2,81],[10.5,87],[18,82],[27,76]].forEach(([at, pitch]) => {
+      tone(pitch, at, 3.5, .05, 'bell');
+      tone(pitch, (at + 1.75) % 32, 3, .015, 'bell');
+    });
+    // Muted, irregular double knocks beneath the drone, instead of dance drums.
+    [1,8.5,17,25].forEach(at => {
+      tone(33, at, .7, .10, 'pulse');
+      tone(33, at + .55, .5, .055, 'pulse');
+    });
+    return buffer;
+  }
+
+  function updateControl() {
+    toggle.setAttribute('aria-pressed', String(muted));
+    toggle.title = muted ? 'Unmute soundtrack' : 'Mute soundtrack';
+    toggle.setAttribute('aria-label', toggle.title);
+    status.textContent = muted ? 'Soundtrack muted.' : source
+      ? 'Spooky soundtrack playing.' : 'Soundtrack will start on your next tap or keypress.';
+  }
+
+  function stop() {
+    if (source) {
+      source.stop();
+      source.disconnect();
+      source = null;
+    }
+    updateControl();
+  }
+
+  function playWhenReady() {
+    if (!entered || muted || document.hidden || source || context.state !== 'running') return;
+    soundtrack ||= compose();
+    source = context.createBufferSource();
+    source.buffer = soundtrack;
+    source.loop = true;
+    source.connect(master);
+    source.start();
+    updateControl();
+  }
+
+  if (!AudioContextClass) {
+    toggle.disabled = true;
+    toggle.title = 'Soundtrack unavailable';
+    toggle.setAttribute('aria-label', toggle.title);
+    status.textContent = 'This browser cannot play the soundtrack.';
+    return;
+  }
+
+  function tryPlay() {
+    if (!entered || muted || document.hidden || source) return;
+    try {
+      if (!context) {
+        context = new AudioContextClass();
+        master = context.createGain();
+        master.gain.value = .35;
+        master.connect(context.destination);
+        context.addEventListener('statechange', () => {
+          if (context.state === 'running') playWhenReady();
+          else stop();
+        });
+      }
+      // Autoplay may remain suspended until a trusted tap or keypress.
+      // Keep this callable while an earlier resume promise is pending.
+      context.resume().then(playWhenReady).catch(updateControl);
+      playWhenReady();
+    } catch {
+      status.textContent = 'Soundtrack unavailable. Tap to try again.';
+    }
+  }
+
+  toggle.addEventListener('click', () => {
+    muted = !muted;
+    if (muted) stop();
+    else tryPlay();
+    updateControl();
+  });
+  function unlock(event) {
+    // A mute-button tap must never accidentally unlock the music.
+    if (event.target instanceof Element && event.target.closest('.sound-toggle')) return;
+    if (event.type === 'keydown' && (event.repeat || event.ctrlKey || event.metaKey || event.altKey)) return;
+    tryPlay();
+  }
+  document.addEventListener('click', unlock);
+  document.addEventListener('keydown', unlock);
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) stop();
+    else tryPlay();
+  });
+  window.addEventListener('pagehide', stop);
+  window.addEventListener('pageshow', tryPlay);
+  document.addEventListener('invitation:enter', () => {
+    entered = true;
+    tryPlay();
+  }, { once: true });
+})();
+
+(() => {
+  const entry = document.querySelector('.entry-screen');
+  const page = document.querySelector('.page');
+  page.inert = true;
+  document.querySelector('.enter-button').addEventListener('click', () => {
+    entry.hidden = true;
+    page.inert = false;
+    document.body.classList.remove('awaiting-entry');
+    // Dispatch synchronously so audio retains the tap's user activation.
+    document.dispatchEvent(new Event('invitation:enter'));
+    document.querySelector('.mail').focus({ preventScroll: true });
+  }, { once: true });
+})();
+</script>
+</body>
+</html>
