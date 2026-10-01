@@ -51,18 +51,22 @@ body{background:#0b141a;color:#bfceca;background-image:linear-gradient(#061017dd
 .sound-toggle:hover{background:#294553}
 @media(max-width:520px){.document-id{font-size:10px;letter-spacing:0;margin-bottom:14px}.note{padding-top:23px}.note h2{line-height:.9}}
 .lab-lit.is-scripted{animation:none}
-.glep-cameo{position:absolute;z-index:1;width:7%;aspect-ratio:2/3;pointer-events:none;clip-path:polygon(0 0,100% 0,100% 62%,75% 62%,75% 68%,0 68%);filter:brightness(.7) saturate(.75);image-rendering:pixelated}
+/* Clip the full scene layer along the foreground object's actual silhouette.
+   The intact sprite extends behind that edge, rather than ending in mid-air. */
+.glep-cameo{position:absolute;inset:0;z-index:1;pointer-events:none;filter:brightness(.7) saturate(.75);image-rendering:pixelated}
 .glep-cameo[hidden]{display:none}
-.glep-cameo img{display:block;width:100%;height:100%;image-rendering:pixelated}
-.glep-cameo[data-spot="stool"]{left:83%;top:65%;transform:scaleX(-1)}
-.glep-cameo[data-spot="crates"]{left:17%;top:72%}
-.glep-cameo[data-spot="desk"]{left:39%;top:67%;transform:scaleX(-1)}
+.glep-cameo img{position:absolute;display:block;height:auto;image-rendering:pixelated}
+.glep-cameo[data-spot="monitor"]{clip-path:polygon(0 0,100% 0,100% 38%,46.6% 38%,31.1% 39.6%,0 39.6%)}
+.glep-cameo[data-spot="monitor"] img{left:38%;top:31.5%;width:8%}
+.glep-cameo[data-spot="crate"]{clip-path:polygon(0 0,100% 0,100% 72%,34% 72%,27% 75%,21.5% 72.7%,0 72.7%)}
+.glep-cameo[data-spot="crate"] img{left:26%;top:67.2%;width:8.8%;transform:scaleX(-1)}
 @media(max-aspect-ratio:3/4){
-  .glep-cameo{width:8%}
-  .glep-cameo[data-spot="stool"]{left:84%;top:57.5%}
-  .glep-cameo[data-spot="crates"]{left:17%;top:67%}
-  .glep-cameo[data-spot="desk"]{left:39%;top:60%}
+  .glep-cameo[data-spot="monitor"]{clip-path:polygon(0 0,100% 0,100% 42.4%,46.4% 42.4%,30.8% 43.2%,0 43.2%)}
+  .glep-cameo[data-spot="monitor"] img{left:38%;top:38.5%;width:9%}
+  .glep-cameo[data-spot="crate"]{clip-path:polygon(0 0,100% 0,100% 61.2%,32% 61.2%,25% 62.8%,20% 61.8%,0 61.8%)}
+  .glep-cameo[data-spot="crate"] img{left:23.5%;top:57.6%;width:9%}
 }
+
 </style>
 <noscript><style>.entry-screen,.sound-toggle,.replay{display:none!important}.awaiting-entry .page{display:block}</style></noscript>
 </head>
@@ -73,7 +77,7 @@ body{background:#0b141a;color:#bfceca;background-image:linear-gradient(#061017dd
     <picture><source media="(max-aspect-ratio: 3/4)" srcset="assets/halloween-lab-mobile.png" width="941" height="1672"><img class="lab-image lab-dark" src="assets/halloween-lab-v2.png" alt="" width="1254" height="1254" fetchpriority="high"></picture>
     <picture><source media="(max-aspect-ratio: 3/4)" srcset="assets/halloween-lab-mobile.png" width="941" height="1672"><img class="lab-image lab-lit" src="assets/halloween-lab-v2.png" alt="" width="1254" height="1254" aria-hidden="true"></picture>
     <picture><source media="(max-aspect-ratio: 3/4)" srcset="assets/halloween-lab-mobile.png" width="941" height="1672"><img class="lab-image lab-monitor" src="assets/halloween-lab-v2.png" alt="" width="1254" height="1254" aria-hidden="true"></picture>
-    <div class="glep-cameo" data-spot="stool" hidden aria-hidden="true"><img src="assets/glep-pixel.png" width="1024" height="1536" alt=""></div>
+    <div class="glep-cameo" data-spot="monitor" hidden aria-hidden="true"><img src="assets/glep-pixel.png" width="1024" height="1536" alt=""></div>
     <button class="computer-hotspot enter-button" type="button" aria-label="Open the invitation on the computer" aria-describedby="entry-hint"></button>
   </figure>
 </section>
@@ -109,7 +113,7 @@ body{background:#0b141a;color:#bfceca;background-image:linear-gradient(#061017dd
   const light = document.querySelector('.lab-lit');
   const cameo = document.querySelector('.glep-cameo');
   const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
-  const spots = ['stool', 'crates', 'desk'];
+  const spots = ['monitor', 'crate'];
   // Same deliberately spaced flicker pattern as the CSS fallback.
   const phases = [[0,1320],[.82,770],[.2,990],[1,1980],[0,2200],
     [.6,770],[.1,1210],[.95,990],[0,770]];
@@ -143,7 +147,7 @@ body{background:#0b141a;color:#bfceca;background-image:linear-gradient(#061017dd
     if (motion.matches) {
       // A still Easter egg replaces random reveals when reduced motion is requested.
       light.style.opacity = '.8';
-      cameo.dataset.spot = 'stool';
+      cameo.dataset.spot = 'monitor';
       cameo.style.opacity = '.8';
       cameo.hidden = false;
       return;
