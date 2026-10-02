@@ -1,0 +1,11 @@
+# Terraform state, credentials, generated configuration and local plans.
+**/.terraform/
+*.tfstate
+*.tfstate.*
+*.tfvars
+*.tfvars.json
+*.tfplan
+crash.log
+crash.*.log
+infra/wrangler-migrations.json
+**/.wrangler/

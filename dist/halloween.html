@@ -19,9 +19,11 @@ body:before{content:'';position:fixed;inset:0;pointer-events:none;z-index:8;box-
 
 @media(max-width:520px){.page{padding:20px 10px 80px}.terminal-case{padding:12px 10px 0}.hardware-top{font-size:9px;letter-spacing:1px;padding-bottom:12px}.hardware-top span{font-size:7px}.mail{border-width:3px}.titlebar{padding:8px;font-size:16px;letter-spacing:0}.headers{padding:10px 12px;font-size:10px}.headers b{width:58px}.attachment{display:none}.stage{padding:22px 10px;min-height:420px}.note{padding:28px 12px 22px;min-height:370px}.note h2{font-size:clamp(36px,10vw,52px);letter-spacing:1px}.note h2 span{font-size:29px}.details div{padding:0 8px}.details strong{font-size:20px;white-space:normal}.note-kicker{font-size:18px;letter-spacing:1px}.mandatory{font-size:17px;letter-spacing:0;margin-top:20px}.postscript{font-size:14px}.statusbar{font-size:12px;padding:8px;letter-spacing:0}.hardware-bottom{gap:8px;font-size:7px;min-height:42px}.hardware-bottom .serial{display:none}.footer{margin-top:20px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}.bat-layer{display:none}.replay{display:none}}
+.rsvp{position:relative;z-index:4;padding:20px 18px 22px;border-top:1px solid #628c99;background:#102b3a;color:#d3e0d8}.rsvp h3{margin:0 0 5px;color:#d4dfc2;font:25px 'VT323',monospace;letter-spacing:1px}.rsvp-intro{margin:0 0 13px;color:#a9c3c5;font-size:11px;line-height:1.5}.rsvp-fields{display:grid;grid-template-columns:1fr 1fr;gap:10px}.rsvp label{display:grid;gap:5px;color:#a9c3c5;font:15px 'VT323',monospace;letter-spacing:1px}.rsvp input{width:100%;min-height:42px;border:1px solid #618391;background:#091c27;color:#e5efdc;padding:8px 10px;font:16px 'Courier New',monospace}.rsvp input::placeholder{color:#718b90}.rsvp input:focus-visible{outline:2px solid #c0d5aa;outline-offset:2px}.rsvp-actions{display:flex;align-items:center;gap:12px;margin-top:12px}.rsvp-submit{min-height:42px;padding:8px 16px;border:1px solid #9da97a;background:#555c46;color:#f1e8c8;font:18px 'VT323',monospace;letter-spacing:1px;cursor:pointer;box-shadow:3px 3px #061017}.rsvp-submit:hover{background:#6b704f}.rsvp-submit:disabled{opacity:.65;cursor:wait}.rsvp-status{min-height:1em;margin:0;color:#d4dfc2;font:16px 'VT323',monospace}.rsvp-status[data-error="true"]{color:#edaa91}.rsvp-trap{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
+@media(max-width:520px){.rsvp{padding:16px 12px}.rsvp-fields{grid-template-columns:1fr;gap:9px}.rsvp-intro{font-size:10px}.rsvp-actions{align-items:flex-start;flex-direction:column;gap:8px}}
 .sound-toggle{position:fixed;right:max(16px,env(safe-area-inset-right));bottom:max(16px,env(safe-area-inset-bottom));z-index:12;display:grid;place-items:center;width:44px;height:44px;padding:10px;border:2px solid #70503b;background:#211714;color:#d5c4a2;cursor:pointer;box-shadow:3px 3px 0 #000}.sound-toggle svg{width:20px;height:20px;shape-rendering:crispEdges}.sound-toggle .muted-mark{display:none}.sound-toggle[aria-pressed="true"] .muted-mark{display:block}.sound-toggle[aria-pressed="true"] .sound-waves{display:none}.sound-toggle:hover{background:#41231b}.sound-toggle:focus-visible{outline:2px solid #d7b28b;outline-offset:5px}.sound-toggle:disabled{opacity:.5;cursor:default}.sound-status{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}.page{padding-bottom:76px}
 
-.entry-screen{position:relative;height:100svh;min-height:360px;overflow:hidden;background:#020507;isolation:isolate}.entry-screen:before{content:"";position:absolute;inset:-20px;background:linear-gradient(#020507a8,#020507ed),url("assets/halloween-lab-v2.png") center/cover;filter:blur(16px);z-index:-1}.entry-screen[hidden]{display:none}.lab-scene{position:absolute;left:50%;top:50%;width:max(100svh,360px);height:max(100svh,360px);transform:translate(-50%,-50%);margin:0}.lab-image{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;image-rendering:pixelated;pointer-events:none}.lab-dark{filter:brightness(.12) saturate(.55)}.lab-lit{animation:lab-flicker 11s steps(1,end) infinite;will-change:opacity}.lab-monitor{clip-path:polygon(35.4% 41.1%,45.3% 39.5%,45.4% 47.1%,43.8% 49.5%,35.6% 50.6%);filter:brightness(.85)}.lab-scene:after{content:'';position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at 43% 44%,transparent 20%,#0008 85%);z-index:2}.computer-hotspot{position:absolute;left:34.8%;top:39%;width:11.7%;height:12.5%;min-width:44px;min-height:44px;z-index:3;border:0;background:transparent;cursor:pointer;padding:0;transform:skewY(-7deg)}.computer-hotspot:before{content:'';position:absolute;inset:2%;border:2px solid #b6eaff;box-shadow:0 0 22px #74cfff66;opacity:0;transition:opacity .2s}.computer-hotspot:hover:before,.computer-hotspot:focus-visible:before{opacity:1}.computer-hotspot:focus-visible{outline:3px solid #e0f5ff;outline-offset:5px}.entry-heading{position:absolute;top:max(24px,env(safe-area-inset-top));left:24px;z-index:4;margin:0;color:#adc0c5;font:20px 'VT323',monospace;letter-spacing:2px;text-shadow:2px 2px #000}.entry-heading:before{content:'';display:inline-block;width:6px;height:6px;margin-right:10px;background:#a3312e;box-shadow:0 0 8px #a3312e}.entry-caption{position:absolute;bottom:max(30px,env(safe-area-inset-bottom));left:50%;transform:translateX(-50%);width:max-content;max-width:90%;z-index:4;text-align:center;pointer-events:none;padding:14px 22px;background:#030609d9;border:1px solid #66758055;box-shadow:4px 4px #0006}.entry-caption p{margin:0;color:#d2e0df;font:clamp(21px,5vw,28px) 'VT323',monospace;letter-spacing:1px}.entry-caption small{display:block;margin-top:6px;font:10px 'Courier New',monospace;color:#97a5aa;letter-spacing:1px}.awaiting-entry .page,.awaiting-entry .sound-toggle,.awaiting-entry .sound-status{display:none}
+.entry-screen{position:relative;height:100svh;min-height:360px;overflow:hidden;background:#020507;isolation:isolate}.entry-screen:before{content:"";position:absolute;inset:-20px;background:linear-gradient(#020507a8,#020507ed),url("assets/halloween-lab-v2.png") center/cover;filter:blur(16px);z-index:-1}.entry-screen[hidden]{display:none}.lab-scene{position:absolute;left:50%;top:50%;width:max(100svh,360px);height:max(100svh,360px);transform:translate(-50%,-50%);margin:0}.lab-image{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;image-rendering:pixelated;pointer-events:none}.lab-dark{filter:brightness(.12) saturate(.55)}.lab-lit{animation:lab-flicker 11s steps(1,end) infinite;will-change:opacity}.lab-monitor{clip-path:polygon(35.4% 41.1%,45.3% 39.5%,45.4% 47.1%,43.8% 49.5%,35.6% 50.6%);filter:brightness(.85)}.lab-scene:after{content:'';position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at 43% 44%,transparent 20%,#0008 85%);z-index:2}.computer-hotspot{position:absolute;left:34.8%;top:39%;width:11.7%;height:12.5%;min-width:44px;min-height:44px;z-index:3;border:0;background:transparent;cursor:pointer;padding:0;transform:skewY(-7deg)}.computer-hotspot:before{content:'';position:absolute;inset:2%;border:2px solid #b6eaff;box-shadow:0 0 22px #74cfff66;opacity:0;transition:opacity .2s}.computer-hotspot:hover:before,.computer-hotspot:focus-visible:before{opacity:1}.computer-hotspot:focus-visible{outline:3px solid #e0f5ff;outline-offset:5px}.entry-heading{position:absolute;top:max(24px,env(safe-area-inset-top));left:24px;z-index:4;margin:0;color:#adc0c5;font:20px 'VT323',monospace;letter-spacing:2px;text-shadow:2px 2px #000}.entry-heading:before{content:'';display:inline-block;width:6px;height:6px;margin-right:10px;background:#a3312e;box-shadow:0 0 8px #a3312e}.entry-caption{position:absolute;bottom:max(30px,env(safe-area-inset-bottom));left:50%;transform:translateX(-50%);width:max-content;max-width:90%;z-index:4;text-align:center;pointer-events:none;padding:14px 22px;background:#030609d9;border:1px solid #66758055;box-shadow:4px 4px #0006}.entry-caption p{margin:0;color:#d2e0df;font:clamp(21px,5vw,28px) 'VT323',monospace;letter-spacing:1px}.entry-caption small{display:block;margin-top:6px;font:10px 'Courier New',monospace;color:#97a5aa;letter-spacing:1px}.awaiting-entry .page,.awaiting-start .sound-toggle,.awaiting-start .sound-status{display:none}
 /* Uneven, spaced-out light failures; no rapid strobe. */
 @keyframes lab-flicker{0%,100%{opacity:0}12%{opacity:.82}19%{opacity:.2}28%{opacity:1}46%{opacity:0}66%{opacity:.6}73%{opacity:.1}84%{opacity:.95}93%{opacity:0}}
 @media(prefers-reduced-motion:reduce){.lab-lit{animation:none!important;opacity:.8}}
@@ -67,10 +69,12 @@ body{background:#0b141a;color:#bfceca;background-image:linear-gradient(#061017dd
   .glep-cameo[data-spot="crate"] img{left:23.5%;top:57.6%;width:9%}
 }
 
+.start-screen{position:fixed;inset:0;z-index:30;width:100%;height:100svh;border:0;padding:24px;background:#000;color:#d3dfdc;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;cursor:pointer;font:30px 'VT323',monospace}.start-screen small{font:10px 'Courier New',monospace;letter-spacing:3px;color:#879994}.start-screen:focus-visible{outline:2px solid #91bdc7;outline-offset:-12px}.start-screen[hidden],.invite-backdrop[hidden]{display:none}.awaiting-start .entry-screen{visibility:hidden}.invite-backdrop{position:fixed;inset:0;z-index:9;overflow:auto;overscroll-behavior:contain;background:#02090de8}.invite-backdrop .page{min-height:100%;padding-top:24px}.close-invite{display:grid;place-items:center;width:44px;height:44px;padding:0;border:1px solid #8cb2bb;background:#1a4057;color:#d9eeec;font:28px 'VT323',monospace;cursor:pointer}.close-invite:hover{background:#426b7a}.close-invite:focus-visible{outline:2px solid #d7ebdf;outline-offset:3px}.titlebar{padding-top:4px;padding-bottom:4px}body{overflow:hidden}
 </style>
-<noscript><style>.entry-screen,.sound-toggle,.replay{display:none!important}.awaiting-entry .page{display:block}</style></noscript>
+<noscript><style>.entry-screen,.sound-toggle,.replay,.start-screen,.close-invite{display:none!important}.awaiting-entry .page,.invite-backdrop[hidden]{display:block}.invite-backdrop{position:static}body{overflow:auto}</style></noscript>
 </head>
-<body class="awaiting-entry">
+<body class="awaiting-entry awaiting-start">
+<button class="start-screen" type="button" aria-label="Tap to continue and start the soundtrack"><span>Tap to continue...</span><small>SOUND ON</small></button>
 <section class="entry-screen" aria-labelledby="entry-title">
   <h1 class="entry-heading" id="entry-title">1 UNREAD MESSAGE</h1>
   <figure class="lab-scene" aria-label="A blood-stained pixel-art laboratory. A scientist lies with their head on the keyboard, blood trailing from their eyes. The overhead light flickers over scientific charts and a shattered, empty experiment containment vessel.">
@@ -81,11 +85,12 @@ body{background:#0b141a;color:#bfceca;background-image:linear-gradient(#061017dd
     <button class="computer-hotspot enter-button" type="button" aria-label="Open the invitation on the computer" aria-describedby="entry-hint"></button>
   </figure>
 </section>
+<div class="invite-backdrop" hidden role="dialog" aria-label="Halloween invitation">
 <div class="page">
   <div class="terminal-case">
     <div class="hardware-top" aria-hidden="true"><strong>H. LABS / TERMINAL 04</strong><span>PROPERTY OF HARRY</span></div>
   <main class="mail" tabindex="-1" aria-label="Halloween party invitation">
-    <div class="titlebar"><span class="mail-icon" aria-hidden="true">✉</span><span>H-MAIL / PERSONAL INBOX</span><div class="window-controls" aria-hidden="true"><span>_</span><span>□</span><span>×</span></div></div>
+    <div class="titlebar"><span class="mail-icon" aria-hidden="true">✉</span><span>H-MAIL / PERSONAL INBOX</span><div class="window-controls"><button class="close-invite" type="button" aria-label="Close invitation and return to the lab">×</button></div></div>
     <div class="headers"><span class="attachment">[ invitation.txt ]</span><p><b>From:</b> Harry &lt;your host&gt;</p><p><b>To:</b> You, if you dare</p><p class="subject"><b>Subject:</b> You're invited…</p></div>
     <div class="stage">
       <article class="note" aria-label="You're invited to Harry's halloween party on Oct 31 at Harry's house, costumes mandatory">
@@ -98,14 +103,27 @@ body{background:#0b141a;color:#bfceca;background-image:linear-gradient(#061017dd
         <p class="postscript">Come as someone else. Leave… if you can.</p>
       </article>
     </div>
+    <section class="rsvp" aria-labelledby="rsvp-title">
+      <h3 id="rsvp-title">RSVP // VISITOR LOG</h3>
+      <p class="rsvp-intro">Confirm your arrival. Tell us what you’ll be wearing.</p>
+      <form class="rsvp-form">
+        <div class="rsvp-fields">
+          <label>Name<input name="name" autocomplete="name" maxlength="80" required placeholder="Your name"></label>
+          <label>Costume<input name="costume" maxlength="80" required placeholder="Who (or what) are you? "></label>
+        </div>
+        <label class="rsvp-trap" aria-hidden="true" tabindex="-1">Leave this field empty<input name="website" autocomplete="off" tabindex="-1"></label>
+        <div class="rsvp-actions"><button class="rsvp-submit" type="submit">SEND RSVP &gt;</button><p class="rsvp-status" role="status" aria-live="polite"></p></div>
+      </form>
+    </section>
     <div class="statusbar"><span>MESSAGE RECEIVED</span><span>CONTAINMENT: OFFLINE</span></div>
   </main>
     <div class="hardware-bottom" aria-hidden="true"><span class="vents"></span><span class="serial">SN: 1031-H / REV. 04</span><span class="power-led"></span><span>POWER</span></div>
   </div>
   <footer class="footer"><button class="replay" type="button">↻ &nbsp; Release the bats again</button></footer>
 </div>
+</div>
 <button class="sound-toggle" type="button" aria-pressed="false" aria-label="Mute soundtrack" title="Mute soundtrack"><svg viewBox="0 0 20 20" aria-hidden="true"><path fill="currentColor" d="M2 7h4V5h2V3h2v14H8v-2H6v-2H2z"/><path class="sound-waves" fill="currentColor" d="M12 6h2v8h-2zM16 3h2v14h-2z"/><path class="muted-mark" fill="currentColor" d="M12 6h2v2h-2zM16 6h2v2h-2zM14 8h2v4h-2zM12 12h2v2h-2zM16 12h2v2h-2z"/></svg></button>
-<p class="sound-status" role="status">Soundtrack starts when you enter.</p>
+<p class="sound-status" role="status">Soundtrack starts when you tap to continue.</p>
 <div class="bat-layer" aria-hidden="true"></div>
 <script>
 // One shared clock keeps the cameo strictly synchronized with the room light.
@@ -118,7 +136,7 @@ body{background:#0b141a;color:#bfceca;background-image:linear-gradient(#061017dd
   const phases = [[0,1320],[.82,770],[.2,990],[1,1980],[0,2200],
     [.6,770],[.1,1210],[.95,990],[0,770]];
   let timer;
-  let entered = false;
+  let entered = true;
   let lastSpot = '';
   light.classList.add('is-scripted');
 
@@ -160,7 +178,9 @@ body{background:#0b141a;color:#bfceca;background-image:linear-gradient(#061017dd
     entered = true;
     clearTimeout(timer);
     cameo.hidden = true;
-  }, { once: true });
+  });
+  document.addEventListener('scene:enter', () => { entered = false; restart(); });
+  document.addEventListener('invitation:exit', () => { entered = false; restart(); });
   window.addEventListener('pagehide', () => { clearTimeout(timer); cameo.hidden = true; });
   window.addEventListener('pageshow', restart);
   restart();
@@ -192,7 +212,12 @@ body{background:#0b141a;color:#bfceca;background-image:linear-gradient(#061017dd
   }
   button.addEventListener('click', release);
   motion.addEventListener('change', () => { if (motion.matches) { clearTimeout(cleanup); layer.replaceChildren(); stage.classList.remove('animating'); } });
-  document.addEventListener('invitation:enter', release, { once: true });
+  document.addEventListener('invitation:enter', release);
+  document.addEventListener('invitation:exit', () => {
+    clearTimeout(cleanup);
+    layer.replaceChildren();
+    stage.classList.remove('animating');
+  });
 })();
 
 // Original eerie laboratory score, rendered locally once and looped sample-accurately.
@@ -349,24 +374,106 @@ body{background:#0b141a;color:#bfceca;background-image:linear-gradient(#061017dd
   });
   window.addEventListener('pagehide', stop);
   window.addEventListener('pageshow', tryPlay);
-  document.addEventListener('invitation:enter', () => {
+  document.addEventListener('scene:enter', () => {
     entered = true;
     tryPlay();
   }, { once: true });
 })();
 
 (() => {
+  const form = document.querySelector('.rsvp-form');
+  const status = document.querySelector('.rsvp-status');
+  const submit = form.querySelector('.rsvp-submit');
+  form.addEventListener('submit', async event => {
+    event.preventDefault();
+    if (!form.reportValidity()) return;
+    submit.disabled = true;
+    status.dataset.error = 'false';
+    status.textContent = 'TRANSMITTING…';
+    const fields = new FormData(form);
+    try {
+      const response = await fetch('/api/rsvp', {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify({
+          name: fields.get('name'),
+          costume: fields.get('costume'),
+          website: fields.get('website'),
+        }),
+      });
+      const result = await response.json();
+      if (!response.ok) throw new Error(result.error || 'The RSVP could not be saved.');
+      form.reset();
+      status.textContent = 'RSVP RECEIVED. SEE YOU ON OCT 31.';
+    } catch (error) {
+      status.dataset.error = 'true';
+      status.textContent = error.message || 'TRANSMISSION FAILED. PLEASE TRY AGAIN.';
+    } finally {
+      submit.disabled = false;
+    }
+  });
+})();
+
+(() => {
   const entry = document.querySelector('.entry-screen');
   const page = document.querySelector('.page');
+  const backdrop = document.querySelector('.invite-backdrop');
+  const start = document.querySelector('.start-screen');
+  const computer = document.querySelector('.enter-button');
+  const close = document.querySelector('.close-invite');
+  const sound = document.querySelector('.sound-toggle');
+  let started = false;
+  entry.inert = true;
   page.inert = true;
-  document.querySelector('.enter-button').addEventListener('click', () => {
-    entry.hidden = true;
+
+  start.addEventListener('click', () => {
+    if (started) return;
+    started = true;
+    start.hidden = true;
+    entry.inert = false;
+    document.body.classList.remove('awaiting-start');
+    // Synchronous dispatch preserves user activation for mobile audio playback.
+    document.dispatchEvent(new Event('scene:enter'));
+    computer.focus({ preventScroll: true });
+  });
+
+  computer.addEventListener('click', () => {
+    if (!started || !backdrop.hidden) return;
+    entry.inert = true;
     page.inert = false;
+    backdrop.hidden = false;
+    backdrop.scrollTop = 0;
     document.body.classList.remove('awaiting-entry');
-    // Dispatch synchronously so audio retains the tap's user activation.
     document.dispatchEvent(new Event('invitation:enter'));
     document.querySelector('.mail').focus({ preventScroll: true });
-  }, { once: true });
+  });
+
+  function closeInvite() {
+    if (backdrop.hidden) return;
+    backdrop.hidden = true;
+    page.inert = true;
+    entry.inert = false;
+    document.body.classList.add('awaiting-entry');
+    document.dispatchEvent(new Event('invitation:exit'));
+    computer.focus({ preventScroll: true });
+  }
+  close.addEventListener('click', closeInvite);
+  backdrop.addEventListener('click', event => {
+    if (!event.target.closest('.terminal-case, .replay')) closeInvite();
+  });
+  document.addEventListener('keydown', event => {
+    if (backdrop.hidden) return;
+    if (event.key === 'Escape') { event.preventDefault(); closeInvite(); }
+    if (event.key === 'Tab') {
+      const replay = document.querySelector('.replay');
+      const controls = [close, ...(replay.getClientRects().length ? [replay] : []), sound].filter(el => !el.disabled);
+      const index = controls.indexOf(document.activeElement);
+      const next = index < 0 ? (event.shiftKey ? controls.length - 1 : 0)
+        : (index + (event.shiftKey ? -1 : 1) + controls.length) % controls.length;
+      event.preventDefault();
+      controls[next].focus();
+    }
+  });
 })();
 </script>
 </body>
